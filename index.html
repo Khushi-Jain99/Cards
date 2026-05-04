@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Cards – Sound Memory Deck</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png?v=2">
+    <link rel="shortcut icon" href="logo.png?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="version-badge">Version 1.0</div>
+            <h1>Game of Cards – Sound Memory Deck</h1>
+            <p class="tagline">An immersive cognitive challenge blending visual patterns with melodic sequence
+                retention.</p>
+
+            <div class="hero-visual">
+                <div class="floating-card c1"><img src="logo.png" alt="Logo"></div>
+                <div class="floating-card c2"><img src="logo.png" alt="Logo"></div>
+                <div class="floating-card c3"><img src="logo.png" alt="Logo"></div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#demo" class="btn-primary">Move to Game & Play</a>
+                <a href="#features" class="btn-secondary">Explore Features</a>
+            </div>
+        </header>
+
+        <!-- Features Section -->
+        <section id="features">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Memory-based</h3>
+                    <p>Engaging gameplay that challenges your cognitive sequence retention.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Piano Tones</h3>
+                    <p>Unique audio feedback for every card using Web Audio API synthesis.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Dynamic Difficulty</h3>
+                    <p>Sequences grow longer as you progress, pushing your limits.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works">
+            <h2>How It Works</h2>
+            <div class="how-it-works">
+                <ul class="step-list">
+                    <li class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Watch & Listen:</strong> The game plays a sequence of cards, each flashing and
+                            emitting a unique piano tone.
+                        </div>
+                    </li>
+                    <li class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Repeat:</strong> Click the cards in the exact same order to progress.
+                        </div>
+                    </li>
+                    <li class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <strong>Level Up:</strong> Every successful round adds one more card to the sequence.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Interactive Demo Section -->
+        <section id="demo" class="game-demo">
+            <h2>Start the Game</h2>
+            <div class="game-header">
+                <div class="game-stats">
+                    <span>Level: <strong id="level-val">1</strong></span>
+                    <span style="margin-left: 20px;">Status: <em id="status-text">Ready</em></span>
+                </div>
+                <div class="game-controls">
+                    <button id="start-btn" class="btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Start
+                        Game</button>
+                    <button id="reset-btn" class="btn-primary"
+                        style="padding: 0.5rem 1.5rem; font-size: 0.9rem; background: #94a3b8; margin-left: 10px;">Reset</button>
+                </div>
+            </div>
+
+            <div class="card-grid" id="card-grid">
+                <!-- Cards will be generated or styled via JS -->
+                <button class="game-card" data-note="261.63">C</button>
+                <button class="game-card" data-note="293.66">D</button>
+                <button class="game-card" data-note="329.63">E</button>
+                <button class="game-card" data-note="349.23">F</button>
+                <button class="game-card" data-note="392.00">G</button>
+                <button class="game-card" data-note="440.00">A</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
